@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex07</title>
+</head>
+<body>
+<p>Nhập số phút gọi: <input type="text" id="minutes"></p>
+<button onclick="check()">Tính cước</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let pbb = 25000; // pbb là phí thuê bao bắt buộc
+        let mn = +document.getElementById('minutes').value;
+        let tc; // tc là tiền cước
+        if (mn <= 50) {
+            tc = mn * 600 + pbb;
+            document.getElementById('result').innerHTML = 'Số tiền cước: ' + tc;
+        } else if (mn <= 200) {
+            tc = 50 * 600 + (mn - 50) * 400 + pbb;
+            document.getElementById('result').innerHTML = 'Số tiền cước: ' + tc;
+        } else {
+            tc = 50 * 600 + 150 * 400 + (mn - 200) * 200 + pbb;
+            document.getElementById('result').innerHTML = 'Số tiền cước: ' + tc;
+        }
+    }
+</script>
+</body>
+</html>

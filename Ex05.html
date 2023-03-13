@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex05</title>
+</head>
+<body>
+<p>Nhập điểm kiểm tra: <input type="text" id="test"></p>
+<p>Nhập điểm thi giữa kỳ: <input type="text" id="midex"></p>
+<p>Nhập điểm thi cuối kỳ: <input type="text" id="finex"></p>
+<button onclick="check()">Kiểm tra</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let point1 = +document.getElementById('test').value;
+        let point2 = +document.getElementById('midex').value;
+        let point3 = +document.getElementById('finex').value;
+        let average = (point1 + point2 + point3) / 3;
+        if (average < 5) {
+            document.getElementById('result').innerHTML = 'Hạng D';
+        } else if (average < 7) {
+            document.getElementById('result').innerHTML = 'Hạng C';
+        } else if (average < 9) {
+            document.getElementById('result').innerHTML = 'Hạng B';
+        } else {
+            document.getElementById('result').innerHTML = 'Hạng A';
+        }
+    }
+</script>
+</body>
+</html>

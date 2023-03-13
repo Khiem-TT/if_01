@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex06</title>
+</head>
+<body>
+<p>Nhập doanh số bán được: <input type="text" id="ds"></p>
+<button onclick="check()">Tính hoa hồng</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let ds = +document.getElementById('ds').value;
+        if (ds < 100000000) {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (0.5 / 100)).toLocaleString();
+        } else if (ds < 250000000) {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (1 / 100)).toLocaleString();
+        } else if (ds < 400000000) {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (2 / 100)).toLocaleString();
+        } else if (ds < 500000000) {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (3 / 100)).toLocaleString();
+        } else if (ds < 600000000) {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (4 / 100)).toLocaleString();
+        } else {
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được là: ' + (ds * (5 / 100)).toLocaleString();
+        }
+    }
+</script>
+</body>
+</html>

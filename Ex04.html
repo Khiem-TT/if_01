@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex04</title>
+</head>
+<body>
+<p>Nhập số thứ nhất: <input type="text" id="z1"></p>
+<p>Nhập số thứ hai: <input type="text" id="z2"></p>
+<p>Nhập số thứ ba: <input type="text" id="z3"></p>
+<button onclick="check()">Kiểm tra</button>
+<b><p id="result"></p></b>
+<script>
+    function check() {
+        let z1 = +document.getElementById('z1').value;
+        let z2 = +document.getElementById('z2').value;
+        let z3 = +document.getElementById('z3').value;
+        if (z1 > z2 && z1 > z3) {
+            document.getElementById('result').innerHTML = z1 + " là số lớn nhất";
+        } else if (z2 > z3) {
+            document.getElementById('result').innerHTML = z2 + " là số lớn nhất";
+        } else {
+            document.getElementById('result').innerHTML = z3 + " là số lớn nhất";
+        }
+    }
+</script>
+</body>
+</html>
